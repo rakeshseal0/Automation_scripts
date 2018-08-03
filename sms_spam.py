@@ -6,10 +6,10 @@ from selenium.common.exceptions import NoSuchElementException
 driver=None
 flag=False
 
-username='9733028233'
+username='9777885566'
 password='xxxxx'
 
-tgt='7001462761'
+tgt='9999999999'
 mssg='vjvdgfqwvjhbfskhdb'
 
 
