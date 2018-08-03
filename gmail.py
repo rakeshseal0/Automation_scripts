@@ -7,7 +7,7 @@ import time
 
 driver=None
 
-email="xxxxxxxxxx"       #login credentials
+email="xxxxxxxxxx@xmail.com"       #login credentials
 password="xxxxxx"
 
 
