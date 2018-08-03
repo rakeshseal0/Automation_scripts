@@ -7,7 +7,7 @@ import time
 
 driver=None
 
-email="xxxxxxx"       #login credentials
+email="xxxxxxxxxx"       #login credentials
 password="xxxxxx"
 
 
@@ -15,6 +15,7 @@ recpnt=["rakeshseal0@gmail.com","rakeshseal8@gmail.com","ieminnovare@gmail.com"]
 subject="s test"
 body="testing s 1"
 recpnt_string=""
+filepath="/home/rakesh/py/Automation_scripts/gmail.py"
 
 
 
@@ -24,7 +25,7 @@ def browser_start():
 
 
 def get_gmail():
-	driver.get("http://www.gmail.com")
+	driver.get("https://mail.google.com/mail/u/0/h/4mk826itq4cr/?&cs=b&pv=tl&v=b")
 
 def login():
 	driver.find_element_by_xpath('//*[@id="identifierId"]').send_keys(email+Keys.ENTER)
@@ -43,10 +44,11 @@ def recpt_list():
 def send_mail():
 	print("Loading..")
 	time.sleep(5)
-	driver.get("https://mail.google.com/mail/u/0/h/4mk826itq4cr/?&cs=b&pv=tl&v=b")
 	driver.find_element_by_xpath('//*[@id="to"]').send_keys(recpnt_string+Keys.ENTER)
 	driver.find_element_by_xpath('/html/body/table[2]/tbody/tr/td[2]/table[1]/tbody/tr/td[2]/form/table[2]/tbody/tr[4]/td[2]/input').send_keys(subject)
 	driver.find_element_by_xpath('/html/body/table[2]/tbody/tr/td[2]/table[1]/tbody/tr/td[2]/form/table[2]/tbody/tr[8]/td[2]/textarea').send_keys(body)
+#   uncomment next line for file adding
+	#driver.find_element_by_xpath('/html/body/table[2]/tbody/tr/td[2]/table[1]/tbody/tr/td[2]/form/table[2]/tbody/tr[6]/td[2]/input').send_keys(filepath)
 	driver.find_element_by_xpath('/html/body/table[2]/tbody/tr/td[2]/table[1]/tbody/tr/td[2]/form/table[3]/tbody/tr/td/input[1]').click()
 	time.sleep(5)
 	print("sucessfully sent :)")
@@ -58,3 +60,4 @@ if __name__ == '__main__':
 	login()
 	recpt_list()
 	send_mail()
+	driver.quit()
