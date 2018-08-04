@@ -1,6 +1,6 @@
 #By Rakesh Seal
 
-#     PARTICIPATION
+#     GUEST
 
 '''''''''
 								INSTRUCTIONS
