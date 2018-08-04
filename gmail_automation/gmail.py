@@ -1,10 +1,12 @@
 #By Rakesh Seal
 
+#     PARTICIPATION
+
 '''''''''
 								INSTRUCTIONS
  1.Email body ----> in body.txt
  2.Edit Subject below in script
- 3.name of the attachments should be: "brochure.pdf"  and "poster.pdf"
+ 3.name of the attachments should be: "program_brochure.pdf"  and "KMMF_poster.jpeg"
  4.Edit gmail credentials before use in script
  5.name of the csv file should be:   "excel_email.csv" and emails will be in 1st row
 '''''''''
@@ -19,14 +21,14 @@ import time
 import csv
 import sys
 
-email="xxxxxxxx3@gmail.com"       							#login credentials
+email="xxxxxxxx@ymail.com"       							#login credentials
 password="passpasspass"
 
 
-subject="Invitation for participation and promotion"            #Email subject
+subject="Invitation for Participation in Eastern India’s first Maker Faire(Kolkata Mini Maker Faire)"            #Email subject
 
-filepath=str(sys.path[0])+"/attachments/brochure.pdf"									#path for attachment
-filepath1=str(sys.path[0])+"/attachments/poster.pdf"
+filepath=str(sys.path[0])+"/attachments/KMMF_poster.jpeg"									#path for attachment
+filepath1=str(sys.path[0])+"/attachments/program_brochure.pdf"
 
 
 
@@ -64,7 +66,7 @@ def csv_to_str():
 def body():
 	print("\n\nsubject:\n"+subject)
 	global body
-	b=open("body.txt","r")
+	b=open("body.txt","r",encoding="utf-8")
 	body=str(b.read())
 	print("\nBody:\n"+body)
 
